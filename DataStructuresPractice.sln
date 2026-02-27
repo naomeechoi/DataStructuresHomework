@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CardInvetory", "CardInvetor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HashItemDictionary", "HashItemDictionary\HashItemDictionary.vcxproj", "{C7F1439E-E3AF-480B-BA8A-812FFC2C60DB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BSTRankingSystem", "BSTRankingSystem\BSTRankingSystem.vcxproj", "{DF84278B-32AA-4B97-9063-BCF215D175B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,10 @@ Global
 		{C7F1439E-E3AF-480B-BA8A-812FFC2C60DB}.Debug|x64.Build.0 = Debug|x64
 		{C7F1439E-E3AF-480B-BA8A-812FFC2C60DB}.Release|x64.ActiveCfg = Release|x64
 		{C7F1439E-E3AF-480B-BA8A-812FFC2C60DB}.Release|x64.Build.0 = Release|x64
+		{DF84278B-32AA-4B97-9063-BCF215D175B7}.Debug|x64.ActiveCfg = Debug|x64
+		{DF84278B-32AA-4B97-9063-BCF215D175B7}.Debug|x64.Build.0 = Debug|x64
+		{DF84278B-32AA-4B97-9063-BCF215D175B7}.Release|x64.ActiveCfg = Release|x64
+		{DF84278B-32AA-4B97-9063-BCF215D175B7}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

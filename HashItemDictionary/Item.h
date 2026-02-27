@@ -52,7 +52,7 @@ public:
 		std::cout << "\n";
 	}
 
-	inline std::string GetName() { return name; }
+	inline const std::string& GetName() const { return name; }
 
 private:
 	static const int ATTRIBUTE_SIZE = 5;

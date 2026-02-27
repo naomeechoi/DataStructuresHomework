@@ -18,12 +18,14 @@ void LoadItems(HashTable<Item*>& itemHash, const std::string& fileName)
 		if (!newItem->ParseItemInfo(line))
 		{
 			delete newItem;
-			newItem = nullptr;
 			continue;
 		}
 		else
 		{
-            itemHash.Add(newItem->GetName(), newItem);
+            if (!itemHash.Add(newItem->GetName(), newItem))
+            {
+                delete newItem;
+            }
 		}
 	}
 }

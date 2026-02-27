@@ -9,14 +9,14 @@ public:
 	HashTable() = default;
 	~HashTable() = default;
 
-    static int GetHash(const std::string& key)
+    static size_t GetHash(const std::string& key)
     {
         int hash = 0;
         for (int i = 0; i < static_cast<int>(key.size()); i++)
         {
             hash = hash * 31 + key[i];
         }
-        return std::abs(hash);
+        return static_cast<size_t>(std::abs(hash));
     }
 
     bool Add(const std::string& key, const T& value)
@@ -40,10 +40,13 @@ public:
             return false;
 
         int hash = GetHash(key) % bucketCount;
-        delete iter->second;
-        iter->second = nullptr;
-        chainingTable[hash].erase(iter);
 
+        if constexpr (std::is_pointer<T>::value)
+        {
+            delete iter->second;
+            iter->second = nullptr;
+        }
+        chainingTable[hash].erase(iter);
         return true;
     }
 
@@ -56,7 +59,7 @@ public:
 
         for (auto iter = chainingTable[hash].begin(); iter != chainingTable[hash].end(); iter++)
         {
-            if ((*iter).first == key)
+            if (iter->first == key)
             {
                 out = iter;
                 return true;
